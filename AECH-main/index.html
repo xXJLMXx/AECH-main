@@ -1,0 +1,254 @@
+<!-- IF YOU ARE LOOKING HERE, FEEL FREE TO JOIN OUR NEXT EVENT AND TEAM 'HACK A BETTER AECH WEBSITE'. CONTACT DAMON H. FOR YOUR FREE TICKET -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <meta name="description" content="A hackathon for the built environment and tech communities.">
+
+    <title>AEC Hackathon</title>
+    
+    <!-- IF MAKE A PWA -->
+    <!--<link rel="manifest" href="/manifest.json">-->
+
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- STYLE -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script>
+      // WebXR requires HTTPS, so the site doesn't work if someone manually enters
+      // the URL and ends up using HTTP. To work around this, force redirect from
+      // http to https for non-localhost addresses.
+      if (window.location.protocol == "http:" &&
+          window.location.hostname != "localhost" && 
+          window.location.hostname != "127.0.0.1" &&
+          window.location.hostname != "[::1]") {
+        window.location = window.location.href.replace('http:', 'https:');        
+      }
+    </script>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>    
+    
+  </head>
+  <body>
+  <!-- HEADER -->
+    <header>
+      <!-- NAVIGATION -->
+      <label id="hamburger-menu" for="menu-toggle" class="hamburger-menu" title="Toggle menu">≡</label>
+      <input type="checkbox" id="menu-toggle"/>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="supporters.html">SUPPORTERS</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li><a href="community.html">COMMUNITY</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+  <!-- 2D PAGE -->
+  <div class="wrapper">
+    <!-- ABOUT -->
+    <section id="about" class="white">
+      <h1 id="name">AEC Hackathon</h1>
+      <h2>**UNDER CONSTRUCTION, SITE IN THE WORKS**</h2> 
+
+      <div class="logo_3D">
+        <a-scene >
+          <a-assets timeout="30000">
+            <a-asset-item id="AECH_logo" src="media/3D/logo.glb"></a-asset-item>
+          </a-assets>
+          
+          <a-entity>
+          <a-camera></a-camera>
+        </a-entity>
+
+          <a-entity id="logo" position="0 3 -1.5" scale="1 1 1">
+            <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 50000">
+              <a-entity position="0 0 0" rotation="0 270 0" gltf-model="#AECH_logo" animation-mixer shadow="cast: true; receive: false">
+              </a-entity>
+            </a-entity>  
+          </a-entity>
+        </a-scene>      
+      </div>
+
+      <div class="content">
+        <p>The AEC (Architecture, Engineering, Construction) Hackathon was created in 2013 to give those designing, building, and maintaining our built environment the opportunity to collaborate with cutting edge technologies and its developers and designers.<br><br> With over 45 events globally, it’s an experience of geeking at its finest for improving the industries that affect all that live or work in a house or building. It has quickly become a global community of innovators that include all elements of the built environment.<br>
+        <br>If you are a built environment and or tech professional, expert, company, conglomerate, country, alien, robot AI, or other working to improve the built environment / give super powers to its workforce, join us!</p>
+        <p>This video from our friends at <a href="https://bloxhub.org/" target="_blank">BLOXHUB</a> gives a great overview of what an <a href="https://aechackathon.com/" target="_blank">AEC Hackathon</a> is about.</p>
+        <div class="iframe-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jL6ZZ1USakc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+        </div>  
+      </div>
+    </section>
+
+<!-- GET STARTED -->
+    <section id="start" class="white">
+      <h2>GET STARTED</h2>
+      <div class="content">
+      <p>Here are the basics you need to participate in the events in 2021.</p>
+      </div>
+      <h4><u>Get Involved</u></h4>
+      <div class="item">
+        <div><a href="https://www.youtube.com/c/AECHackathon" target="_blank"><img class="icon" src="img/graphic/icon-youtube.png"></a><br>Watch past team presentations on our Youtube</div>
+        <div><a href="events.html"><img class="icon" src="img/graphic/icon-event.png"></a><br>Join the next event</div>
+      </div>
+      <h4><u>Join the Discussion</u></h4>
+      <div class="item">
+        <div>
+          <a href="https://www.linkedin.com/groups/5126362/" target="_blank"><img class="icon" src="img/graphic/icon-linkedin.png"></a><br>LinkedIn Group
+        </div>
+        <div>
+          <a href="https://join.slack.com/t/aec-hackathon/shared_invite/zt-42vrfeqo-2j4L6WUph61L6cRdg11nFQ" target="_blank"><img class="icon" src="img/graphic/icon-slack.png"></a><br>Join the Slack Group<br>(active during events)
+        </div>
+        <div>
+          <a href="https://twitter.com/aechackathon" target="_blank"><img class="icon" src="img/graphic/icon-twitter.png"></a><br>Follow us on Twitter
+        </div>
+      </div>    
+    </section>
+
+<!-- CHALLENGES -->
+    <section id="challenges">
+        <h2>CHALLENGES</h2>
+        <div class="content">
+          <p>Here are our challenge categories for every hackathon that we sponsor. Additional supporter challenges and prizes are announced at the kickoff of each event.</p>
+        </div>
+        <div class="item">
+          <figure>
+            <figcaption>
+              <h5><strong>BEST OVERALL PROJECT</strong></h5>
+              <p>The project that really hits the mark on execution, utility, and technical merits.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <figcaption>
+              <h5><strong>BEST SOLVES A BIG PROBLEM PROJECT</strong></h5>
+              <p>The project that solves a big problem for a built environment profession.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <figcaption>
+              <h5><strong>BEST MASHUP PROJECT</strong></h5>
+              <p>The best solution that combines an event's sponsors and <a href="supporters.html" target="_blank">community</a> supporters’ tech.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <figcaption>
+              <h5><strong>BEST HACK FROM A PAST EVENT</strong></h5>
+              <p>Projects from previous AEC Hackathons or from the <a href="resources.html#resources">open source projects here</a>.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <figcaption>
+              <h5><strong>BEST HACK FOR HUMANS</strong></h5>
+              <p>Projects that use built environment related data to improve the human experience in structures and cities.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <figcaption>
+              <h5><strong>BEST STARTUP PROJECT*</strong></h5>
+              <p>For teams that want to go further with their solutions and present a second time to a round of judges from the investor community.<br><h6><i>*only at select locations</i></h6></p>
+            </figcaption>
+          </figure>
+        </div>
+    </section>
+
+<!-- PRESENTATIONS -->
+    <section id="presentations">
+        <h2>PRESENTATIONS</h2>
+        <div class="content">
+          <p>Attendees will be able to enjoy presentations from various speakers in our <a href="community.html">global community</a>. For online events, stream information will be shared with your registration email after the event starts.</p>
+        </div>
+    </section>
+
+ <!-- FAQ-->
+    <section id="presentations">
+        <h2>F.A.Q. – FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="faq">
+          <div>
+            <p><b>1. WHAT IS A HACKATHON?</b><br>Hackathons have long been staple events in the Technology Industry since the late 1990s. A Hackathon is an intense event that brings together computer programmers like software developers, graphic designers and user interface specialists along with industry process experts and professionals to identify issues and create software solutions, usually within a weekend.</p>
+          </div>
+          <div>  
+            <p><b>2. WHO SHOULD ATTEND?</b><br>AEC Professionals – This also includes Facilities Managers, GIS Specialists, Public Utilities, Policy Makers, and everyone that deals with the built environment. Come with your industry experience and the problems you want to solve. Tech Developers – We need tech ninjas, makers, game programmers, and rebels that code. Come to hack with new hardware and tech all in the name of doing something crazy and fantastic–and helpful. UI/UX Designers – We need people like you to make everything look beautiful, work intuitively, and create a stellar user experience. Great applications require great design.</p>
+          </div>
+          <div>
+            <p><b>3. WHAT DO I BRING?</b><br>This is a very hands-on and grassroots event. Bring your laptops, mobile phones, scanners, VR/AR HMDs, drones, wearable computing devices, to whatever inspires you but above all, your energy and your brain! Don’t worry if you forget something, there will be tons of stuff to do.</p>
+          </div>  
+          <div>
+            <p><b>4. WHAT IS THE GOAL OF THE HACKATHON?</b><br>We want to create an environment that embraces new ideas and technology solutions for the AEC Industry. A place where technology designers and developers can come to help the industry, and a safe zone for AEC R&D teams to geek out without having to worry about failure or affecting a company’s bottom line. We know it takes longer than a weekend to build great solutions, but this is ample time to form teams of good people and begin creating great solutions.</p>
+          </div>  
+          <div>
+            <p><b>5. HOW DO I FORM OR JOIN A TEAM AND WHY?</b><br>We hope teams at the hackathon will form around problems expressed by participating AEC professionals or the provided hack categories. We do encourage participants to start forming teams before the event. If you would like to start a team or are looking for a team to join, be sure to attend the Friday evening mixer or make an announcement at the opening ceremony of the event on Saturday. You can also propose or join a team via our forum, Meetup Community, Facebook page, and LinkedIn group.</p>
+          </div>
+        </div>
+        <div class="faq">    
+          <div>
+            <p><b>6. ARE THERE PRIZES FOR THE HACK CATEGORIES?</b><br>We are able to provide gift cards and software prizes thanks to our sponsors!</p>
+          </div>  
+          <div>
+            <p><b>7. WHO OWNS MY PROJECT & IP?</b><br>The team that develops the project is the owner of the project and IP. We do encourage sharing of code with others in the community or making code open source, but it is not required to participate in the event.</p>
+          </div>  
+          <div>
+            <p><b>8. HOW DO I HAVE AN AEC HACKATHON IN MY LOCAL AREA?</b><br>If you want to organize an AEC Hackathon in your area or have one at your existing event, contact us and we will let you know how to make it happen.</p></div>  
+          <div>
+            <p><b>9. IS THERE REIMBURSEMENT FOR TRAVEL?</b><br>No, we do not offer any reimbursement for travel expenses.</p></div>  
+          <div><p><b>10. IS THERE A HACKATHON CODE OF CONDUCT?</b><br>Yes, <a href="code-of-conduct.html"><b>see it here.</b></a></p></div>  
+        </div>
+    </section>
+
+<!-- MEDIA PARTNERS -->
+    <section id="supporters" class="white">
+       <h2>MEDIA PARTNERS</h2>
+        <div class="content">
+            <p>Learn about the latest and greatest happenings in the industry from these amazing media channels!</p>
+          </div>
+        <div class="item">
+          <div class="supporter">
+            <a href="https://aec-business.com/" target="_blank"><img class="hack" src="img/logo/aecbusiness.jpg"></a>
+          </div>
+          <div class="supporter">
+            <a href="https://www.aechive.net/" target="_blank"><img class="hack" src="img/logo/aechive.jpg"></a>
+          </div>
+          <div class="supporter">
+            <a href="https://www.eventbrite.com/o/hugh-seaton-31317257927" target="_blank"><img class="hack" src="img/logo/contechquarterly.jpg"></a>
+          </div>
+          <div class="supporter">
+            <a href="https://www.holzertime.com/" target="_blank"><img class="hack" src="img/logo/holzertime.jpg"></a>
+          </div>
+        </div> 
+    </section>   
+
+  </div> <!-- .wrapper -->
+
+  <footer>
+    <h4>AEC HACKATHON 2021</h4>
+  </footer>
+
+
+<!-- STATCOUNTER -->
+  <script type="text/javascript">
+  var sc_project=12338363; 
+  var sc_invisible=1; 
+  var sc_security="9c906739"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="site stats"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/12338363/0/9c906739/1/"
+  alt="site stats"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+
+  </body>
+</html>

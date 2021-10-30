@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AEC Hackathon</title>
+    <meta name="description" content="Upgrading the built environment">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+	<header></header>
+	<nav></nav>
+	<section>
+		<a-scene background="color: #fff">
+			<a-assets>
+		        <img id="globe" src="img/map.jpg">
+			</a-assets>
+
+			<a-entity position="0 0 0" rotation="0 0 0">
+				<a-camera position="0 0 0" near="0.1"></a-camera>
+			</a-entity>
+
+			      <!-- 3D  -->
+			<a-entity id="globe" position="0 0 0">
+
+			<a-sphere radius="50" segments-height="64" position="0 0 0" src="#globe">
+				<a-animation attribute="rotation"
+				dur="180000"
+				fill="forwards"
+				to="0 360 0"
+				repeat="indefinite"
+				easing="linear">    
+				</a-animation>
+			</a-sphere>
+
+			</a-entity>
+
+			<a-image src="#logo" scale="1 1 1" position="0 0 -2"></a-image>
+	    </a-scene>
+	</section>
+	<footer></footer>
+</body>
+</html>

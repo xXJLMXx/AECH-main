@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> Access AEC content </h2>
+Your eventbrite email <input id="inputEmail" > 
+<button onClick={verifyEmail()}>Enter</button>
+<p id="demo"></p>
+<p id="dataDump"></p>
+<script>
+	function verifyEmail(){
+      var request = new XMLHttpRequest();
+      var inputEmail = document.getElementById("inputEmail").value;
+      document.getElementById("demo").innerHTML = "Waiting for eventbrite data...";
+      // only need corsPrefix before the url for local testing
+      var corsPrefix = 'https://cors-anywhere.herokuapp.com/';
+      var url = 'https://www.eventbriteapi.com/v3/events/114089619122/attendees?token=JTTQZ22VCDILTTQ525PX';
+      // Open a new connection, using the GET request on the URL endpoint
+      request.open('GET', corsPrefix + url, true);
+      // this function is called when the API request returns with a response
+      request.onload = function () {
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.response);
+		// data.attendees is an array, we use 'map' to map attendee to (=>) get an arrray of emails
+        var emailsArray = data.attendees.map((attendee) => attendee.profile.email);
+        // 'some' method returns true if any element matches a condition, the condition here being: email == inputEmail
+        var isFound = emailsArray.some((email) => email == inputEmail);
+		// using this if-else syntax here:  condition ? doThisIfTrue : doThisIfFalse
+        document.getElementById("demo").innerHTML = (isFound ? "Success! Email found!" : "Email not registered!");
+		// for testing
+        document.getElementById("dataDump").innerHTML = "All emails dump: " + emailsArray;
+      }
+      // Send request
+      request.send();
+	}
+</script> 
+</body>
+</html>
